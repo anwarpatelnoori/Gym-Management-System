@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-05 18:20:24.139146",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "weight",
+  "calories",
+  "push_ups"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "read_only_depends_on": "gym_registration_id",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weight"
+  },
+  {
+   "fieldname": "calories",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Calories"
+  },
+  {
+   "fieldname": "push_ups",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Push Ups"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-08-06 23:24:40.845244",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Fitness Tracker",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

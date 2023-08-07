@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "GMT.####",
+ "creation": "2023-07-25 17:58:46.809977",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "master_name",
+  "age",
+  "experience",
+  "phone",
+  "column_break_oppiw",
+  "photo",
+  "gender",
+  "address",
+  "master_fee"
+ ],
+ "fields": [
+  {
+   "fieldname": "master_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Master Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "non_negative": 1,
+   "options": "Phone"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "Male\nFemale",
+   "reqd": 1
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "description": "In Years",
+   "fieldname": "experience",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Experience",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "master_fee",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Master Fee",
+   "non_negative": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_oppiw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Select",
+   "label": "Training Level",
+   "options": "Easy\nMedium\nHard",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-26 16:46:38.389169",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Master Trainer",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

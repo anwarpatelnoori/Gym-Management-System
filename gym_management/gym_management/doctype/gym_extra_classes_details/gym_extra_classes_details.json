@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{class_name}",
+ "creation": "2023-07-26 12:05:17.241189",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "class_name",
+  "day",
+  "start_at",
+  "column_break_mq12n",
+  "teacher_name",
+  "fee",
+  "end_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "fee",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_at",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Start at",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mq12n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "day",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Day",
+   "options": "Saturday\nSunday",
+   "reqd": 1
+  },
+  {
+   "fieldname": "teacher_name",
+   "fieldtype": "Data",
+   "label": "Teacher Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_at",
+   "fieldtype": "Time",
+   "label": "End at",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-07 15:51:35.206542",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Extra Classes Details",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

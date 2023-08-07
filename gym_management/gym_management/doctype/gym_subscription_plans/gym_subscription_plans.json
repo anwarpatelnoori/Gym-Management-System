@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-25 11:54:40.990901",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "plan",
+  "fee",
+  "validity_in_days",
+  "validity_in_months"
+ ],
+ "fields": [
+  {
+   "fieldname": "plan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fee",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "validity_in_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Validity In Days",
+   "reqd": 1
+  },
+  {
+   "description": "Assuming 1 month =30 Day",
+   "fieldname": "validity_in_months",
+   "fieldtype": "Int",
+   "label": "Validity In Months",
+   "read_only_depends_on": "validity_in_days"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-25 15:06:48.811801",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Subscription Plans",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

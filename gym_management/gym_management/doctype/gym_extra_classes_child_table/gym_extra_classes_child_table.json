@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-28 11:48:34.402049",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "class_id",
+  "day",
+  "class_name",
+  "teacher_name",
+  "fee",
+  "start_at",
+  "end_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "class_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Class ID",
+   "options": "Gym Extra Classes Details",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "class_id.day",
+   "fieldname": "day",
+   "fieldtype": "Data",
+   "label": "Day"
+  },
+  {
+   "fetch_from": "class_id.class_name",
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "label": "Class Name"
+  },
+  {
+   "fetch_from": "class_id.teacher_name",
+   "fieldname": "teacher_name",
+   "fieldtype": "Data",
+   "label": "Teacher Name"
+  },
+  {
+   "fetch_from": "class_id.fee",
+   "fieldname": "fee",
+   "fieldtype": "Currency",
+   "label": "Fee"
+  },
+  {
+   "fetch_from": "class_id.start_at",
+   "fieldname": "start_at",
+   "fieldtype": "Data",
+   "label": "Start at"
+  },
+  {
+   "fetch_from": "class_id.end_at",
+   "fieldname": "end_at",
+   "fieldtype": "Data",
+   "label": "End at"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-28 13:13:00.126141",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Extra Classes Child Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

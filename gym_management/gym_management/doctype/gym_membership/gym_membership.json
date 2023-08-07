@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "GYM-MEM.####",
+ "creation": "2023-07-25 11:15:48.290083",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_member_id",
+  "phone__number",
+  "membership_valid_for",
+  "membership_starts",
+  "column_break_rxomy",
+  "full_name",
+  "age",
+  "fee_paid",
+  "membership_ends",
+  "section_break_4ohtz",
+  "total_amount",
+  "column_break_hvg5u",
+  "amount_paid",
+  "column_break_0kzgf",
+  "balance",
+  "section_break_xms0h",
+  "column_break_chsas",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_from": "gym_member_id.name1",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "read_only_depends_on": "gym_member_id",
+   "unique": 1
+  },
+  {
+   "fieldname": "fee_paid",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Fee Paid",
+   "options": "Paid\nUnpaid\nPartially Paid",
+   "reqd": 1
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "label": "Balance"
+  },
+  {
+   "default": "150",
+   "fetch_from": "subscription.fee",
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "gym_member_id",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Gym Member ID",
+   "options": "Gym Members",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rxomy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4ohtz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_hvg5u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_0kzgf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xms0h",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "label": "Amount Paid",
+   "options": "Gym Trainers"
+  },
+  {
+   "fieldname": "membership_starts",
+   "fieldtype": "Date",
+   "label": "Membership Starts"
+  },
+  {
+   "fieldname": "column_break_chsas",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "membership_ends",
+   "fieldtype": "Date",
+   "label": "Membership Ends"
+  },
+  {
+   "default": "1",
+   "description": "In Years",
+   "fieldname": "membership_valid_for",
+   "fieldtype": "Int",
+   "label": "Membership Valid For"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Membership",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "gym_member_id.phone_number",
+   "fieldname": "phone__number",
+   "fieldtype": "Data",
+   "label": "Phone  Number"
+  },
+  {
+   "fetch_from": "gym_member_id.age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-08-07 11:36:33.643021",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Membership",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "full_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

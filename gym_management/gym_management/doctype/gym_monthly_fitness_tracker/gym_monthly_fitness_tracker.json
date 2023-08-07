@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{gym_member_name} Monthly Health report",
+ "creation": "2023-08-05 18:25:02.755157",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_registration_id",
+  "validity_starts",
+  "plan",
+  "column_break_ifhkj",
+  "gym_member_name",
+  "validity_till",
+  "your_master",
+  "section_break_lxqgu",
+  "gym_fitness_tracker"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_registration_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gym Registration ID",
+   "options": "Gym Registration Form",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "gym_registration_id.member_name",
+   "fieldname": "gym_member_name",
+   "fieldtype": "Data",
+   "label": "Gym Member Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "gym_registration_id.subscription_plan",
+   "fieldname": "plan",
+   "fieldtype": "Data",
+   "label": "Plan",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "gym_registration_id.plan_end",
+   "fieldname": "validity_till",
+   "fieldtype": "Date",
+   "label": "Validity Till",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ifhkj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lxqgu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gym_fitness_tracker",
+   "fieldtype": "Table",
+   "label": "Gym Fitness Tracker",
+   "options": "Gym Fitness Tracker"
+  },
+  {
+   "fetch_from": "gym_registration_id.date_of_registration",
+   "fieldname": "validity_starts",
+   "fieldtype": "Date",
+   "label": "Validity Starts"
+  },
+  {
+   "fetch_from": "gym_registration_id.master_name",
+   "fieldname": "your_master",
+   "fieldtype": "Data",
+   "label": "Your Master"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-07 13:19:03.613327",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Monthly Fitness Tracker",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

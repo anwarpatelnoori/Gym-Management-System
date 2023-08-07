@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>XYZ Gym - Your Fitness Journey Starts Here</title>
+    <link rel="stylesheet" href="gym_portal.css">
+</head>
+
+<body>
+    <header>
+        <h1>StandardTouch Gym</h1>
+        <p>Your Fitness Journey Starts Here</p>
+    </header>
+    <nav>
+        <a href="#trainers">All Gym Trainers</a>
+        <a href="#extra-classes">Gym Extra Classes</a>
+        <a href="#subscription-plans">Subscription Plans</a>
+        <a href="#workout-plans">Workout Plans</a>
+        <a href="#lockers">Lockers Details</a>
+        <a href="http://127.0.0.1:8001/login#login">Login</a>
+    </nav>
+   
+
+    
+    <div class="container">
+
+        <!-- gym master section -->
+        {% set gym_master_trainer = frappe.get_all('Gym Master Trainer',filters=None,fields=['master_name','age','experience','phone','gender','address','master_fee'])%}
+        <div class="section" id="trainers">
+            <div class="section-title">All Gym Trainers</div>
+            {% for master in gym_master_trainer %}
+            <div class="item">
+                <h3>Master Name: {{master.master_name}}</h3>
+                <p>Age: {{master.age}}</p>
+                <p>Exp: {{master.experience}}</p>
+                <p>Phone: {{master.phone}}</p>
+                <p>Fee: ₹ {{ frappe.format(master.master_fee, {'fieldtype': 'Currency'}) }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Gym Extra Classes -->
+        {% set extra_classes = frappe.get_all('Gym Extra Classes Details', filters=None, fields=['name','class_name','day','start_at','teacher_name','fee','end_at'])%}
+        <div class="section" id="extra-classes">
+            <div class="section-title">Our Extra Classes</div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Class ID</th>
+                        <th>Class Name</th>
+                        <th>Teacher Name</th>
+                        <th>Fee</th>
+                        <th>Day</th>
+                        <th>Start at</th>
+                        <th>End at</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for class in extra_classes %}
+                    <tr>
+                        <td>{{class.name}}</td>
+                        <td>{{class.class_name}}</td>
+                        <td>{{class.teacher_name}}</td>
+                        <td>₹{{ frappe.format(class.fee,{'fieldtype': 'Currency'})}}</td>
+                        <td>{{class.day}}</td>
+                        <td>{{class.start_at}}</td>
+                        <td>{{class.end_at}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    <!-- Subscriptions Plans -->
+    {% set plans = frappe.get_all('Gym Subscription Plans', filters=None, fields=['plan','fee','validity_in_months'], order_by='fee asc') %}
+    <div class="section" id="subscription-plans">
+        <div class="section-title">Subscription Plans</div>
+        {% for plan in plans %}
+        <div class="item">
+            <h3>Plan Name: {{plan.plan}}</h3>
+            <p>Fee: ₹{{ frappe.format(plan.fee,{'fieldtype': 'Currency'})}}</p>
+            <p>Validity: {{plan.validity_in_months}} months</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="section" id="workout-plans">
+        <div class="section-title">Workout Plans</div>
+        <div class="item">
+            <h3>Beginner Workout Plan</h3>
+            <p>Designed for beginners to get started</p>
+            <p>Includes: Cardio, Strength Training</p>
+        </div>
+        <div class="item">
+            <h3>Advanced Workout Plan</h3>
+            <p>For experienced individuals looking to push their limits</p>
+            <p>Includes: High-Intensity Interval Training (HIIT)</p>
+        </div>
+        <!-- Add more workout plans here -->
+    </div>
+    {% set lockers = frappe.get_all('Gym Locker', filters=None, fields=['locker','locker_fee','duration']) %}
+    <div class="section" id="lockers">
+        <div class="section-title">Lockers Details</div>
+        {%for locker in lockers%}
+        <div class="item">
+            <h3>{{locker.locker}}</h3>
+            <p>Fee: ₹{{ frappe.format(locker.locker_fee,{'fieldtype': 'Currency'})}}</p>
+            <p>Duration: {{locker.duration}} months</p>
+        </div>
+       {% endfor %}
+    </div>
+    </div>
+</div>
+</body>
+
+</html>

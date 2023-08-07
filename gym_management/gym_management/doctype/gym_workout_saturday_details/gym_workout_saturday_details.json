@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-26 14:01:09.044264",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "exercise",
+  "targeted_muscle",
+  "exercise_name",
+  "no_of_sets",
+  "reputation"
+ ],
+ "fields": [
+  {
+   "fieldname": "exercise",
+   "fieldtype": "Link",
+   "label": "Exercise ",
+   "options": "Gym Workout Saturday Name",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "exercise.targeted_muscle",
+   "fetch_if_empty": 1,
+   "fieldname": "targeted_muscle",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Targeted Muscle",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "exercise.exercise_name",
+   "fetch_if_empty": 1,
+   "fieldname": "exercise_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Exercise Name",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "exercise.no_of_sets",
+   "fieldname": "no_of_sets",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No. of Sets",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "exercise.reputation",
+   "fieldname": "reputation",
+   "fieldtype": "Int",
+   "label": "Reputation",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-26 14:09:52.339313",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Workout Saturday Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

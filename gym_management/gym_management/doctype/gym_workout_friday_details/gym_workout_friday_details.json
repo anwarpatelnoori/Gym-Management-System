@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-26 14:00:46.201924",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "exercise",
+  "targeted_muscle",
+  "exercise_name",
+  "time_duration"
+ ],
+ "fields": [
+  {
+   "fieldname": "exercise",
+   "fieldtype": "Link",
+   "label": "Exercise ",
+   "options": "Gym Workout Friday Name",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "exercise.targeted_muscle",
+   "fetch_if_empty": 1,
+   "fieldname": "targeted_muscle",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Targeted Muscle",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "exercise.exercise_name",
+   "fetch_if_empty": 1,
+   "fieldname": "exercise_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Exercise Name",
+   "reqd": 1
+  },
+  {
+   "description": "In mins",
+   "fetch_from": "exercise.time_duration",
+   "fetch_if_empty": 1,
+   "fieldname": "time_duration",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Time Duration",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-26 16:16:18.143059",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Workout Friday Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

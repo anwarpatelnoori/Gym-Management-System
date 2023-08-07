@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Gym Master {master_name} Plan",
+ "creation": "2023-07-25 17:30:30.789271",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "master_id",
+  "master_experience",
+  "column_break_vn6di",
+  "master_name",
+  "master_training_level",
+  "monday_workout_section",
+  "monday_exercise",
+  "tuesday_workout_section",
+  "tuesday_exercise",
+  "wednesday_workout_section",
+  "wednesday_exercise",
+  "thursday_workout_section",
+  "thursday_exercise",
+  "friday_workout_section",
+  "friday_exercise",
+  "saturdayworkout_section",
+  "saturday_exercise",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_gym_workout_plan"
+ ],
+ "fields": [
+  {
+   "fetch_from": "master_id.master_name",
+   "fetch_if_empty": 1,
+   "fieldname": "master_name",
+   "fieldtype": "Data",
+   "label": "Master Name"
+  },
+  {
+   "fieldname": "monday_exercise",
+   "fieldtype": "Table",
+   "label": "Monday  Exercise",
+   "options": "Gym Workout Monday Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tuesday_exercise",
+   "fieldtype": "Table",
+   "label": "Tuesday Exercise",
+   "options": "Gym Workout Tuesday Details"
+  },
+  {
+   "fieldname": "wednesday_exercise",
+   "fieldtype": "Table",
+   "label": "Wednesday Exercise",
+   "options": "Gym Workout Wednesday Details"
+  },
+  {
+   "fieldname": "thursday_exercise",
+   "fieldtype": "Table",
+   "label": "Thursday Exercise",
+   "options": "Gym Workout Thursday Details"
+  },
+  {
+   "fieldname": "friday_exercise",
+   "fieldtype": "Table",
+   "label": "Friday Exercise",
+   "options": "Gym Workout Friday Details"
+  },
+  {
+   "fieldname": "saturday_exercise",
+   "fieldtype": "Table",
+   "label": "Saturday Exercise",
+   "options": "Gym Workout Saturday Details"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Gym Workout Plan"
+  },
+  {
+   "fieldname": "parent_gym_workout_plan",
+   "fieldtype": "Link",
+   "label": "Parent Gym Workout Plan",
+   "options": "Gym Workout Plan"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "monday_workout_section",
+   "fieldtype": "Section Break",
+   "label": "Monday Workout"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "tuesday_workout_section",
+   "fieldtype": "Section Break",
+   "label": "Tuesday Workout"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "wednesday_workout_section",
+   "fieldtype": "Section Break",
+   "label": "Wednesday Workout"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "thursday_workout_section",
+   "fieldtype": "Section Break",
+   "label": "Thursday Workout"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "friday_workout_section",
+   "fieldtype": "Section Break",
+   "label": "Friday Workout"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "saturdayworkout_section",
+   "fieldtype": "Section Break",
+   "label": "SaturdayWorkout"
+  },
+  {
+   "fieldname": "master_training_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Master Training Level",
+   "options": "Easy\nMedium\nHard"
+  },
+  {
+   "fieldname": "column_break_vn6di",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "master_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Master ID",
+   "options": "Gym Master Trainer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "master_id.experience",
+   "fieldname": "master_experience",
+   "fieldtype": "Float",
+   "label": "Master Experience",
+   "precision": "2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2023-07-27 15:25:50.183672",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Workout Plan",
+ "naming_rule": "Expression (old style)",
+ "nsm_parent_field": "parent_gym_workout_plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
