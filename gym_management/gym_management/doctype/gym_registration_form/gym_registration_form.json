@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "GYM-REG-.####",
+ "autoname": "field:member_name",
  "creation": "2023-07-28 10:31:01.787349",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,7 +10,6 @@
  "field_order": [
   "gym_member_details_section",
   "membership_id",
-  "ttt",
   "age",
   "membership_fee",
   "column_break_njpsx",
@@ -61,15 +60,8 @@
    "in_filter": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Member Name "
-  },
-  {
-   "fieldname": "ttt",
-   "fieldtype": "Data",
-   "in_filter": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "ttt"
+   "label": "Member Name ",
+   "unique": 1
   },
   {
    "fetch_from": "membership_id.age",
@@ -317,6 +309,7 @@
    "label": "Validity Plan In Days"
   },
   {
+   "depends_on": "eval:doc.do_you_want_personal_trainer === 'Yes'",
    "fetch_from": "master_id.phone",
    "fieldname": "master_phone_number",
    "fieldtype": "Data",
@@ -338,11 +331,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-07 12:50:42.143933",
+ "modified": "2023-08-08 15:00:41.850342",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Registration Form",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

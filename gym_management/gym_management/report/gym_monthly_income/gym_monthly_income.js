@@ -20,14 +20,14 @@ frappe.query_reports["Gym Monthly Income"] = {
 			'reqd':0,
 			'options':'Gym Subscription Plans'
 		},
-		{
-			'fieldname':'extra_classes',
-			'label':('Extra Classes'),
-			'fieldtype':'Link',
-			'width':100,
-			'options':'Gym Extra Classes Details'
+		// {
+		// 	'fieldname':'extra_classes',
+		// 	'label':('Extra Classes'),
+		// 	'fieldtype':'Link',
+		// 	'width':100,
+		// 	'options':'Gym Extra Classes Details'
 			
-		}
+		// }
 
 		
 

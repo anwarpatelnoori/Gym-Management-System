@@ -12,7 +12,7 @@ class GymRegistrationForm(Document):
 		p_function.locker(self)
 		# p_function.membership_and_member_validation(self)
 		p_function.membership_validation(self)
+	def on_submit(self):
 		# if(self.do_you_want_locker=="Yes"):
 		# 	p_function.locker_available(self)
-	def on_submit(self):
-		pass 
+		pass

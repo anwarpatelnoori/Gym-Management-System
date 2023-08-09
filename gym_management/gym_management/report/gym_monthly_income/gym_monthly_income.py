@@ -13,7 +13,8 @@ def get_data(filters):
 		conditions+=f" AND member_name = '{(filters.get('member_name'))}' "
 	if (filters.get('subscription_plan')):
 		conditions+=f" AND subscription_plan = '{(filters.get('subscription_plan'))}'"
-	conditions+=f" AND extra_classes = '{(filters.get('extra_classes'))}'"
+	# if(filters.get('extra_classes')):
+	# 	conditions+=f" AND extra_classes = '{(filters.get('extra_classes'))}'"
 	# print(f'\n\n\n{filters}\n\n\n')
 	# print(f'\n\n\n{conditions}\n\n\n')
 	# print(f'\n\n\n{filters}\n\n\n')
