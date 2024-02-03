@@ -36,7 +36,6 @@
   },
   {
    "description": "In mins",
-   "documentation_url": "In mins",
    "fieldname": "time_duration",
    "fieldtype": "Int",
    "in_list_view": 1,
